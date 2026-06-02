@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+data/leads.json
+data/*.private.json
+.pytest_cache/
+.ruff_cache/
+dist/
+*.egg-info/

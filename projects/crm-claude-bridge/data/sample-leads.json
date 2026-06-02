@@ -1,0 +1,38 @@
+[
+  {
+    "full_name": "Marie Dubois",
+    "company": "Atelier Lumière",
+    "email": "marie@atelier-lumiere.example",
+    "title": "Head of Operations",
+    "linkedin_url": "https://linkedin.example/in/marie-dubois",
+    "website": "https://atelier-lumiere.example",
+    "source": "trade-show-2026",
+    "notes": "Mentioned automating quote generation."
+  },
+  {
+    "full_name": "Hiroshi Tanaka",
+    "company": "Kintsugi Robotics",
+    "email": "h.tanaka@kintsugi.example",
+    "title": "CTO",
+    "linkedin_url": "https://linkedin.example/in/hiroshi-tanaka",
+    "website": "https://kintsugi.example",
+    "source": "inbound-form",
+    "notes": "Asked about LangChain vs custom orchestration."
+  },
+  {
+    "full_name": "Amara Okafor",
+    "company": "Baobab Analytics",
+    "email": "amara@baobab.example",
+    "title": "Founder",
+    "source": "referral",
+    "notes": "Looking for AI consulting on retention models."
+  },
+  {
+    "full_name": "Lukas Berger",
+    "company": "Helvetia Print Co.",
+    "email": "lukas@helvetiaprint.example",
+    "title": "Marketing Manager",
+    "source": "cold-list",
+    "notes": "Small print shop, unclear AI fit."
+  }
+]

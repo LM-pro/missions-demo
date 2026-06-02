@@ -1,0 +1,5 @@
+Invoice #2026-001
+Client: Acme Corp
+Amount due: $4,250.00
+Due date: 2026-07-15
+Contact: billing@acme.com

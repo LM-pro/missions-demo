@@ -1,0 +1,19 @@
+[
+  {
+    "handle": "@startup_founder_42",
+    "messages": [
+      {"from": "startup_founder_42", "text": "Hey, saw your post on AI lead gen. Do you take new clients?"},
+      {"from": "me", "text": "Depends on the project — what are you building?"},
+      {"from": "startup_founder_42", "text": "B2B SaaS, doing 40k MRR, need outbound. Budget ~5k/mo for 3 months."},
+      {"from": "me", "text": "Sounds aligned — want to jump on a call this week?"},
+      {"from": "startup_founder_42", "text": "Yes — Thursday 3pm CET works?"}
+    ]
+  },
+  {
+    "handle": "@random_user_xyz",
+    "messages": [
+      {"from": "random_user_xyz", "text": "love your content bro"},
+      {"from": "me", "text": "Thanks!"}
+    ]
+  }
+]

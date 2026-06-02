@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "doc-intel-claude"
+version = "0.1.0"
+description = "Document intelligence pipeline powered by Claude: extract structured entities, dates, amounts, and summaries from PDF/DOCX/TXT."
+authors = ["Thorsen <thorsen@omega.dev>"]
+readme = "README.md"
+license = "MIT"
+packages = [{include = "doc_intel"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+anthropic = "^0.39.0"
+pypdf = "^4.0.0"
+python-docx = "^1.1.0"
+pydantic = "^2.5.0"
+fastapi = {version = "^0.110.0", optional = true}
+uvicorn = {version = "^0.27.0", optional = true}
+python-multipart = {version = "^0.0.9", optional = true}
+python-dotenv = "^1.0.0"
+rich = "^13.7.0"
+
+[tool.poetry.extras]
+api = ["fastapi", "uvicorn", "python-multipart"]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+pytest-asyncio = "^0.23.0"
+black = "^24.0.0"
+ruff = "^0.3.0"
+
+[tool.poetry.scripts]
+doc-intel = "doc_intel.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
