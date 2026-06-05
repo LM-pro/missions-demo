@@ -163,7 +163,7 @@ def render_report(leads: list[Lead], threshold: int) -> str:
         return f"📭 No leads ≥ {threshold}/100 in {len(leads)} conversations."
 
     lines = [
-        f"🎯 *DM Qualifier — {len(qualified)} hot leads* (threshold {threshold})",
+        f"DM Qualifier - {len(qualified)} hot leads (threshold {threshold})",
         "",
     ]
     for l in qualified[:10]:

@@ -1,23 +1,18 @@
 # Claude DM Qualifier
 
-**Instagram / WhatsApp DM Sales Setter** powered by the Claude API.
-Auto-qualify inbound DM conversations, score sales potential 0–100, and ship a
-ready-to-send recommended reply straight to your Telegram.
+Instagram and WhatsApp DM sales setter powered by the Claude API.
+Auto-qualify inbound DM conversations, score sales potential 0-100, and receive ready-to-send recommended replies via Telegram.
 
-Stop wasting hours triaging DMs. Let Claude tell you which 5 conversations are
-actually worth closing today.
+Stop wasting hours triaging DMs. Let Claude tell you which conversations are worth closing today.
 
-## Use case
+## Use Case
 
-You run an agency / personal brand / e-com store and receive 50–500 Instagram
-or WhatsApp DMs per week. Most are noise (compliments, spam, cold pitches).
-A handful are real buyers hiding in the middle. This tool:
+You run an agency, personal brand, or e-commerce store and receive 50-500 Instagram or WhatsApp DMs per week. Most are noise (compliments, spam, cold pitches). A handful are real buyers hiding in the middle. This tool:
 
 1. Ingests a JSON export of your DM threads.
-2. Sends each thread to Claude with a hard-tuned sales analyst prompt.
-3. Returns a structured JSON: `score`, `intent`, `pain_points`, `objections`,
-   `next_action`, `recommended_reply`.
-4. Filters by score threshold and pushes the top 10 hottest leads to Telegram.
+2. Sends each thread to Claude with a tuned sales analyst prompt.
+3. Returns structured JSON: score, intent, pain points, objections, next action, recommended reply.
+4. Filters by score threshold and pushes the top leads to Telegram.
 
 ## Install
 
@@ -38,17 +33,17 @@ cp .env.example .env  # then fill in your keys
 ## Usage
 
 ```bash
-# Basic — score everything, show report
+# Basic -- score everything, show report
 python main.py -i data/conversations.json
 
-# Hot leads only (≥ 75), ship to Telegram
+# Hot leads only (score >= 75), ship to Telegram
 python main.py -i data/conversations.json -t 75 --notify telegram
 
 # Parallel API calls (default 5)
 python main.py -i data/conversations.json -c 10
 ```
 
-### Input format
+### Input Format
 
 ```json
 [
@@ -56,8 +51,8 @@ python main.py -i data/conversations.json -c 10
     "handle": "@prospect_handle",
     "messages": [
       {"from": "prospect", "text": "Hey, do you do custom websites?"},
-      {"from": "me", "text": "Yes — what's the project?"},
-      {"from": "prospect", "text": "Budget is around 3k, need it next month"}
+      {"from": "me", "text": "Yes -- what is the project?"},
+      {"from": "prospect", "text": "Budget is around $3k, need it next month"}
     ]
   }
 ]
@@ -65,9 +60,9 @@ python main.py -i data/conversations.json -c 10
 
 ### Output
 
-- `data/leads.json` — full structured analysis for every conversation
+- `data/leads.json` -- full structured analysis for every conversation
 - Markdown report on stdout
-- Telegram message (if `--notify telegram` and creds in `.env`)
+- Telegram message (if `--notify telegram` and credentials in `.env`)
 
 ## Tests
 
@@ -77,4 +72,4 @@ pytest tests/
 
 ## License
 
-MIT — do whatever, just don't blame me if Claude misreads your DMs.
+MIT
