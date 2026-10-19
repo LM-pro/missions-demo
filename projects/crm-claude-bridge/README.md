@@ -1,12 +1,11 @@
 # CRM-Claude Bridge
 
-An async ETL pipeline that turns a flat list of leads (JSON or CSV) into a
-fully-enriched, scored, and exportable pipeline using the Claude API as the
-research and judgement engine.
-
-Built for solo operators and small B2B agencies who need a CRM-grade lead
-qualification flow without paying for Clearbit + Apollo + a six-figure sales
-engineer. Drop in a list, get back a ranked CSV (or Notion page) in minutes.
+Personal Python demo that reads sample lead records from JSON or CSV, asks the
+Claude API to classify and score them, caches results locally and exports a
+ranked CSV. The generated attributes are model outputs, not independently
+verified company research. Notion export is a possible extension and is not
+implemented. The pipeline has not been deployed for a client or validated for
+production use.
 
 ---
 
@@ -47,8 +46,8 @@ engineer. Drop in a list, get back a ranked CSV (or Notion page) in minutes.
                                             └──────────────┘
 ```
 
-Concurrency is bounded by `asyncio.Semaphore(MAX_CONCURRENCY)` so you don't
-nuke the Anthropic rate limit. Failed calls back off exponentially with
+Concurrency is bounded by `asyncio.Semaphore(MAX_CONCURRENCY)`, but provider
+rate limits still apply. Failed calls back off exponentially with
 jitter and surface as `LeadStatus.FAILED` rows rather than crashing the run.
 
 ---
