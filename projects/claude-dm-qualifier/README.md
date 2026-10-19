@@ -1,18 +1,15 @@
 # Claude DM Qualifier
 
-Instagram and WhatsApp DM sales setter powered by the Claude API.
-Auto-qualify inbound DM conversations, score sales potential 0-100, and receive ready-to-send recommended replies via Telegram.
-
-Stop wasting hours triaging DMs. Let Claude tell you which conversations are worth closing today.
+Personal Python demo that scores sample direct-message conversations with the Claude API and suggests a reply. It reads a JSON export rather than connecting to an Instagram or WhatsApp inbox. Scores and suggestions have not been validated against real customer conversations; review them before any use.
 
 ## Use Case
 
-You run an agency, personal brand, or e-commerce store and receive 50-500 Instagram or WhatsApp DMs per week. Most are noise (compliments, spam, cold pitches). A handful are real buyers hiding in the middle. This tool:
+The demo takes a JSON list of conversations and processes each thread. It:
 
 1. Ingests a JSON export of your DM threads.
 2. Sends each thread to Claude with a tuned sales analyst prompt.
 3. Returns structured JSON: score, intent, pain points, objections, next action, recommended reply.
-4. Filters by score threshold and pushes the top leads to Telegram.
+4. Filters by score threshold and can send selected results to Telegram when configured.
 
 ## Install
 
