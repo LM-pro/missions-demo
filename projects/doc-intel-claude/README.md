@@ -1,13 +1,12 @@
 # Doc Intel Claude
 
-Production-grade document intelligence pipeline powered by Claude.
-Upload PDFs, DOCX or TXT files and get structured entities, dates, amounts, executive summaries, action items, and risk flags as strict JSON or CSV. Built for ops teams who need reliable document processing without babysitting prompts.
+Personal document-processing demo powered by Claude. It accepts PDF, DOCX or TXT files and returns structured information as JSON or CSV. It has not been deployed or validated for production use.
 
 ---
 
 ## Why This Exists
 
-Manual document review (invoices, contracts, reports) is the number one hidden cost in service businesses. `doc-intel-claude` turns a messy folder of files into a queryable spreadsheet in seconds, with Claude doing the semantic heavy lifting and Pydantic enforcing schema discipline.
+This project explores how to extract information from invoices, contracts and reports. Claude handles the language analysis, while Pydantic validates the response schema. Processing time and extraction quality depend on the input files and the API response.
 
 ## Use Cases
 
@@ -15,7 +14,7 @@ Manual document review (invoices, contracts, reports) is the number one hidden c
 - **Contract triage** -- Surface parties, effective dates, renewal clauses, and risk flags for legal first-pass review.
 - **Research ingestion** -- Turn a stack of PDFs into structured summaries with key points for a knowledge base.
 - **Email/CV screening** -- Classify document type, extract contact info, score relevance.
-- **Audit batches** -- Async batch mode with bounded concurrency to process 1000+ files without tripping rate limits.
+- **Audit batches** -- Async batch mode with bounded concurrency; provider rate limits still apply.
 
 ## Stack
 
